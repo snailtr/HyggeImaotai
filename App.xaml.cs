@@ -68,7 +68,7 @@ namespace hygge_imaotai
 
             // 创建抢购预约的任务
             var jobDetail = JobBuilder.Create<ReservationJob>().Build();
-            var trigger = TriggerBuilder.Create().WithCronSchedule("0 5 9 ? * * ").Build();
+            var trigger = TriggerBuilder.Create().WithCronSchedule("3 7 9 ? * * ").Build();
             // 创建刷新数据的任务
             var refreshJobDetail = JobBuilder.Create<RefreshJob>().Build();
             var refreshTrigger = TriggerBuilder.Create().WithCronSchedule("0 25,55 6,7,8 ? * * ").Build();
